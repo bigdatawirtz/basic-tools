@@ -1,4 +1,10 @@
+Vagrant helps you to create and manage a virtualized environment.
+
 ## Installing
+
+Vagrant requires a previous VirtualBox installation. 
+
+Download and install Vagrant from: https://www.vagrantup.com/
 
 ## Commands
 
