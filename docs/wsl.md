@@ -2,6 +2,8 @@ WSL allows to run gnu/Linux distros in your Windows system.
 
 ## Installing
 
+Run installation from privileged user.
+
 Updates wsl and install default distro (ubuntu):
 
 `wsl --install`

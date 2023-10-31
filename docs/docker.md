@@ -8,6 +8,7 @@
 * `docker ps -a`: View all created containers 
 * `docker stop [container-name]`: Stop the indicated container.
 * `docker start [container-name]`: Start the indicated container.
+* `docker exec [container-name] /path/executable`: run a executable file from inside the container (sample: docker exec -it container-name bash)
 
 ### Images
 
@@ -23,6 +24,15 @@
 ## Installing
 
 ### Windows 
+
+Docker is a linux technology so you need to [install WSL](wsl.md#installing) in order to use docker over Windows.
+
+After installing WSL in Windows, download and install Docker Desktop.
+
+1. Download [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+2. Install Docker Desktop (admin privileges needed)
+
+Docker Desktop install process adds the user who runs the installation to the docker-users local group. Add new users to that group if you want to allow them to run docker desktop.
 
 
 ### GNU/Linux 
@@ -66,3 +76,49 @@ sudo docker run hello-world
 ```
 docker run hello-world
 ```
+
+
+## How to mount your own Registry
+We use to get docker images from [hub.docker.com](https://hub.docker.com), the main repository offered by docker.com but it is possible to moutn our own local Registry.
+
+In this tutorial we are going to launch a minimal insecure Registry:
+
+**Create new registry host name_host (or ip_host)**
+1. Launch a registry image
+
+    docker run -d -p 5000:5000 --name my-registry registry:2
+
+**Client host - Configure client to user insecure registries**
+
+1. Create/Edit /etc/docker/daemon.json
+```
+{
+        "insecure-registries": ["name_host/ip_host:5000"]
+}
+```
+2. Restart docker service
+
+    sudo systemctl restart docker
+
+
+**Client host - Upload new image to registry**
+1. Download a sample image from hub.docker.com
+
+    docker pull busybox
+2. Tag the image pointing to the new repository 
+
+    docker image tag busybox name_host:5000/new-busybox
+3. Push the new image to the private registry
+
+    docker push name_host:5000/new-busybox
+4. Verify the new added image
+
+    curl http://name_host:5000/v2/_catalog
+
+**Another client host - Download image from private registry**
+1. Download image
+
+    docker pull name_host:5000/new-busybox
+2. Launch container
+
+    docker run name_host:5000/new-busybox
