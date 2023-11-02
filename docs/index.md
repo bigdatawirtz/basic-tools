@@ -5,10 +5,11 @@ Basic tools for classroom work.
 ## Tools
 
 * Virtualbox
-* Vagrant
-* WSL
-* Docker
-* Git / Github
+* [Vagrant](vagrant)
+* [WSL](wsl)
+* [Docker](docker)
+* [Git / Github](git)
+* [Markdown](markdown)
 
 
 
