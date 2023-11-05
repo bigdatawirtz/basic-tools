@@ -25,6 +25,32 @@ Configuration
 Branches
 * ...
 
+## Git first steps tutorial
+
+1. Create a new directory to host a repository: `mkdir new-repo`
+2. Initialize new repo: `git init`
+3. Update configuration (if needed): `git config user.name=myname` + `git confit user.email=my-email@domain.com`
+4. Verify my current configuration: `git config --list`
+5. View repo status: `git status`
+6. Create a new file: `echo Hi > greetings.txt`
+7. View new status: `git status`
+8. Add new file to staging area: `git add greetings.txt`
+9. Commit changes to repository: `git commit -m 'changes added' `
+10. View status:  `git status`
+11. View history log: `git log`
+12. Create a new file: `echo Bye > goodbye.txt`
+13. View new status: `git status`
+14. Add new file to staging area: `git add goodbye.txt`
+15. Commit changes to repository: `git commit -m 'new file added' `
+16. View status:  `git status`
+17. View history log: `git log --oneline`
+18. List files: `ls`
+19. Move to previous state: `git checkout commit-id`
+20. Verify current files in working directory: `ls`
+21. View history log: `git log --oneline --all`
+22. Back to the future: `git checkout more-recent-commit-id`
+
+
 ## GitHub
 
 GitHub is a platform and cloud-based services for software development and version control using Git. It provides repositories for software developers.
