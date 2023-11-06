@@ -55,3 +55,15 @@ Branches
 
 GitHub is a platform and cloud-based services for software development and version control using Git. It provides repositories for software developers.
 
+### Github first steps
+
+How to clone a repository from Github, add changes locally and send them back to the remote repository.
+
+1. Clone the remote repository: `git clone https://github.com/some_github_user/repo-name.git`
+2. Enter the local repo directory: `cd repo-name`
+3. Add new files or update existing ones
+4. Add changes to *Stage Area*: `git add .`
+5. Confirm changes in *Stage Area* to *Repository*: `git commit -m "comment"`
+6. Send changes to remote repository: `git push`
+
+The `git push` command requires authentication. You need to create an authentication token in the Github web to use as a password in each push operation.
