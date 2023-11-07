@@ -1,3 +1,4 @@
+# Anaconda
 Anaconda is an open-source distribution of Python. It comes with the Python interpreter, a package manager and various packages related do data science.
 
 ## Installing

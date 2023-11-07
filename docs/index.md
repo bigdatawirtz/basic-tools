@@ -12,5 +12,6 @@ Basic tools for classroom work.
 * [Markdown](markdown)
 * [Criptography](criptography)
 * [Markdown](markdown)
+* [Python](python)
 
 
