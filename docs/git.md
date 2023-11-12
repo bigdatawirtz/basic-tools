@@ -22,8 +22,7 @@ Configuration
 * `git config --list`: Show current configuration
 * `git config var-name=var-value`: Set a value for the indicated config variable
 
-Branches
-* ...
+
 
 ## Git first steps tutorial
 
@@ -50,6 +49,63 @@ Branches
 21. View history log: `git log --oneline --all`
 22. Back to the future: `git checkout more-recent-commit-id`
 
+## Git branches and merge
+
+You can use branches to manage many lines of develpment independently. To incorporate the content of a new branch in the main branch you have the merge function.
+
+* `git log --oneline --graph`; this combination can be useful to understand branches.
+* `git branch newbranch`: create a new branch called newbranch
+* `git branch`: view branches
+* `git switch newbranch`: switches to newbranch
+* `git merge newbranch`: merge newbranch in the current branch
+
+### Merge Fast-Forward
+
+When you create a new branch and you make many commits you can merge this branch into main. If main doesn't have any commits since the new branch creation the merge function will use the Fast-Forward technique. 
+
+1. (main) > `git branch newbranch`
+2. (main) > `git switch newbranch`
+3. (nova_branch) > `touch file1.txt`
+4. (nova_branch) > `git add .`
+5. (nova_branch) > `git commit -m "file.txt added"`
+6. (nova_branch) > `switch main`
+7. (main) > `git merge nova_branch`
+
+### Merge Three Way (without conflicts)
+
+Merge Three Way without conflicts happen when you merge a new branch with commits and the main branch with commits too. If the commits of the two branches don't involve the same files then there won't be any conflitcs. The merge is automatic.
+
+1. (main) > `git branch newbranch`
+2. (main) > `git switch newbranch`
+3. (nova_branch) > `touch file1.txt`
+4. (nova_branch) > `git add .`
+5. (nova_branch) > `git commit -m "file.txt added"`
+6. (nova_branch) > `switch main`
+7. (main) > `touch file2.txt`
+8. (main) > `git add .`
+9. (main) > `git commit -m`
+10. (main) > `git merge nova_branch`
+
+
+### Merge Three Way (with conflicts)
+
+Merge Three Way without conflicts happen when you merge a new branch with commits and the main branch with commits too. If the commits of the two branches involve the same files then there will be conflitcs. The merge is not automatic and the user have to decide wich code to save and commit.
+
+1. (main) > `git branch newbranch`
+2. (main) > `git switch newbranch`
+3. (nova_branch) > `echo "pan" > lista_compra.txt`
+4. (nova_branch) > `git add .`
+5. (nova_branch) > `git commit -m "pan added"`
+6. (nova_branch) > `switch main`
+7. (main) > `echo "queixo" > lista_compra.txt`
+8. (main) > `git add .`
+9. (main) > `git commit -m`
+10. (main) > `git merge nova_branch`
+11. Git stops the merge operation and ask the user to resolve the conflicts
+12. `nano lista_compra.txt`
+13. (main) > `git add lista_compra.txt`
+14. (main) > `git commit -m "lista da compra completa"`
+
 
 ## GitHub
 
@@ -67,3 +123,9 @@ How to clone a repository from Github, add changes locally and send them back to
 6. Send changes to remote repository: `git push`
 
 The `git push` command requires authentication. You need to create an authentication token in the Github web to use as a password in each push operation.
+
+### SSH Authentication
+
+You can user your RSA SSH public key to authenticate in Github:
+1. Go to your Profile Settings and paste your public RSA public Key in the 'SSH and GPG keys' (New SSH key button).
+2. Git will use your default RSA Key in your next `push` operation.

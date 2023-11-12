@@ -11,7 +11,7 @@ Basic tools for classroom work.
 * [Docker](docker)
 * [Markdown](markdown)
 * [Criptography](criptography)
-* [Markdown](markdown)
 * [Python](python)
-
+* [Markdown](markdown)
+* [YAML](yaml)
 
