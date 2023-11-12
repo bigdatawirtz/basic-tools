@@ -20,6 +20,44 @@
 * `docker network ls`: show created networks
 * `docker network create [network-name]`: create a new network
 
+### Docker Compose
+
+You can use predefined container orquestrations with docker-compose. A docker-compose.yml is a YAML file where you can describe your microservices architechture with code.
+
+* `docker compose up -d`: dowload required images from docker hub and then launch all containers defined in the yaml file. (-d for --detach mode)
+* `docker compose down`: destroy the current orquestration and stops all the defined services 
+
+**docker-compose.yml** (sample)
+```
+version: '3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+volumes:
+    db_data:
+```
+
 
 ## Installing
 
