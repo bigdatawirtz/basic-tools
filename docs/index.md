@@ -10,7 +10,7 @@ Basic tools for classroom work.
 * [Vagrant](vagrant)
 * [Docker](docker)
 * [Markdown](markdown)
-* [Criptography](criptography)
+* [SSH](ssh)
 * [Python](python)
 * [Markdown](markdown)
 * [YAML](yaml)
