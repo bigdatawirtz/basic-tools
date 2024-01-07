@@ -14,4 +14,5 @@ Basic tools for classroom work.
 * [Python](python)
 * [Markdown](markdown)
 * [YAML](yaml)
+* [OpenStack](openstack)
 

@@ -11,7 +11,7 @@ https://www.anaconda.com/download
 ### Miniconda
 Miniconda is a minimal installation of Conda + Python + other userful packages (pip, zlib ...).
 
-https://docs.conda.io/projects/miniconda/en/latest/#
+[Install instructions](https://docs.conda.io/projects/miniconda/en/latest/#)
 
 ## Conda
 Conda is the main Anaconda package manager.
