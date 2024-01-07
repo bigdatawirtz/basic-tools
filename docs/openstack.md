@@ -53,6 +53,15 @@ Once the configuration is loaded you can verify the connection to the cloud by l
 
 If you can see a list of the current instances on your project then the connection is ready!
 
+You can automate the execution of the OpenStack RC File by adding the following line at the end of the bashrc file in your home directory: ~/.bashrc
+
+```
+...
+source your_OpenStack_RC_File.sh
+ ```
+
+The ~/.bashrc is executed each time you open a new terminal so every new terminals will be configured to connect to your OpenStack account in the cloud.
+
 ### Using openstack-cli
 
 #### Create an instance with script file
