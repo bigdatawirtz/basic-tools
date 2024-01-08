@@ -64,15 +64,15 @@ The ~/.bashrc is executed each time you open a new terminal so every new termina
 
 ### Using openstack-cli
 
-#### Create an instance with script file
+#### Create an instance from command line
 
 You can launch a new instance providing the main configuration from the CLI:
 
-```openstack server create --user-data script_for_server.sh --image image_name --flavor flavor_name --key-name your_key_name --network network_name --security-group group_name new_instance_name```
+```openstack server create --image image_name --flavor flavor_name --key-name your_key_name --network network_name --security-group group_name new_instance_name```
 
 For example:
 
-```openstack server create --user-data script_laboratorio_1.sh --image baseos-Ubuntu-22.04-v2 --flavor m1.2c2m --key-name if_fulano --network provnet-formacion-vlan-133 --security-group grupo_aberto fulano_nova_instancia```
+```openstack server create --image baseos-Ubuntu-20.04-v5 --flavor m1.2c2m --key-name if_fulano --network provnet-formacion-vlan-133 --security-group aberto fulano_nova_instancia```
 
 Verify that the new instance was launched:
 
@@ -86,4 +86,9 @@ You can delete the new instance by doing:
 
 ```openstack server delete dani-borrame fulano_nova_instancia```
 
+#### Create an instance with script file
+
+You can launch a new instance providing the main configuration from the CLI and software provisioning via script file:
+
+```openstack server create --user-data script_laboratorio_1.sh --image baseos-Ubuntu-20.04-v2 --flavor m1.2c2m --key-name if_fulano --network provnet-formacion-vlan-133 --security-group aberto fulano_nova_instancia```
 

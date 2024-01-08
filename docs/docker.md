@@ -20,6 +20,16 @@
 * `docker network ls`: show created networks
 * `docker network create [network-name]`: create a new network
 
+### Volumes
+
+Docker has many ways to work with persistence.
+
+You can bindmount a local folder to share data between your host and the container:
+* `docker run -v /path-to-localfolder:/path-to-containerfolder [image-name]`
+
+You can create a docker volume to persist data and allow acces from the container:
+* `docker run -v volume-name:/path-to-containerfolder [image-name]`
+
 ### Docker Compose
 
 You can use predefined container orquestrations with docker-compose. A docker-compose.yml is a YAML file where you can describe your microservices architechture with code.
