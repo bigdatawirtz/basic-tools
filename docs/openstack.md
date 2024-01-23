@@ -84,7 +84,7 @@ Show details of your instance:
 
 You can delete the new instance by doing:
 
-```openstack server delete dani-borrame fulano_nova_instancia```
+```openstack server delete fulano_nova_instancia```
 
 #### Create an instance with script file
 
