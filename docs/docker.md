@@ -6,8 +6,9 @@
 * `docker run [image-name]`: Create a container from the indicated image
 * `docker ps`: View the running containers
 * `docker ps -a`: View all created containers 
-* `docker stop [container-name]`: Stop the indicated container.
-* `docker start [container-name]`: Start the indicated container.
+* `docker stop [container-name]`: Stop the indicated container
+* `docker start [container-name]`: Start the indicated container
+* `docker rm [container-name]`: Remove the indicated container
 * `docker exec [container-name] /path/executable`: run a executable file from inside the container (sample: docker exec -it container-name bash)
 
 ### Images
