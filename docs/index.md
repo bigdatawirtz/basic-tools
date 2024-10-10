@@ -6,8 +6,6 @@ Basic tools for classroom work.
 
 * [WSL](wsl)
 * [Git / Github](git)
-* Virtualbox
-* [Vagrant](vagrant)
 * [Docker](docker)
 * [Markdown](markdown)
 * [SSH](ssh)
@@ -16,3 +14,7 @@ Basic tools for classroom work.
 * [YAML](yaml)
 * [OpenStack](openstack)
 
+## Deprecated
+
+* Virtualbox
+* [Vagrant](vagrant)
