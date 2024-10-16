@@ -115,7 +115,7 @@ GitHub is a platform and cloud-based services for software development and versi
 
 How to clone a repository from Github, add changes locally and send them back to the remote repository.
 
-1. Clone the remote repository: `git clone https://github.com/some_github_user/repo-name.git`
+1. Clone the remote repository: `git clone git@github.com:some_github_user/repo-name.git`
 2. Enter the local repo directory: `cd repo-name`
 3. Add new files or update existing ones
 4. Add changes to *Stage Area*: `git add .`
@@ -127,5 +127,6 @@ The `git push` command requires authentication. You need to create an authentica
 ### SSH Authentication
 
 You can user your RSA SSH public key to authenticate in Github:
-1. Go to your Profile Settings and paste your public RSA public Key in the 'SSH and GPG keys' (New SSH key button).
-2. Git will use your default RSA Key in your next `push` operation.
+1. Confirm that you're using the right remote: `git remote -v` . Are your remotes pointing to git@github:username/reponame.git ?
+2. Go to your Profile Settings and paste your public RSA public Key in the 'SSH and GPG keys' (New SSH key button).
+3. Git will use your default RSA Key in your next `push` operation.
