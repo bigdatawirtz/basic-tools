@@ -127,6 +127,7 @@ The `git push` command requires authentication. You need to create an authentica
 ### SSH Authentication
 
 You can user your RSA SSH public key to authenticate in Github:
+
 1. Confirm that you're using the right remote: `git remote -v` . Are your remotes pointing to git@github:username/reponame.git ?
 2. Go to your Profile Settings and paste your public RSA public Key in the 'SSH and GPG keys' (New SSH key button).
 3. Git will use your default RSA Key in your next `push` operation.
@@ -134,7 +135,7 @@ You can user your RSA SSH public key to authenticate in Github:
 ### Github flows
 
 When you code with more people you need to stablish certain rules to coordinate work, this is called a *workflow*. The are many different workflows, for example:
-- **Feature Branch Workflow**: Each new feature or fix should be developed in its own branch. When the feature is complete it gets merged into master (or main). This workflow is good for small teams and projects with few contributors.
-- **Gitflow Workflow**: It's a more complex workflow that includes multiple branches to support features, releases and hotfixes.
+* **Feature Branch Workflow**: Each new feature or fix should be developed in its own branch. When the feature is complete it gets merged into master (or main). This workflow is good for small teams and projects with few contributors.
+* **Gitflow Workflow**: It's a more complex workflow that includes multiple branches to support features, releases and hotfixes.
 
 We suggest the following simplified version of the Feature Branch Workflow: [a simple feature branch workflow for two](gitflows)
