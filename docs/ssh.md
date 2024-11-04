@@ -42,5 +42,6 @@ Connect a remote host only reachable throug another host:
 ```ssh -A -t user_aux@aux_host.domain.com ssh destiny_user@destiny_host.domain.com```
 
 Options:
-- -A: enable forwarding 
-- -t: force pseudo-terminal allocation
+
+* -A: enable forwarding 
+* -t: force pseudo-terminal allocation

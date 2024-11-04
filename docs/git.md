@@ -135,6 +135,7 @@ You can user your RSA SSH public key to authenticate in Github:
 ### Github flows
 
 When you code with more people you need to stablish certain rules to coordinate work, this is called a *workflow*. The are many different workflows, for example:
+
 * **Feature Branch Workflow**: Each new feature or fix should be developed in its own branch. When the feature is complete it gets merged into master (or main). This workflow is good for small teams and projects with few contributors.
 * **Gitflow Workflow**: It's a more complex workflow that includes multiple branches to support features, releases and hotfixes.
 
