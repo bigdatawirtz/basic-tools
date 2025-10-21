@@ -47,7 +47,7 @@ Configuration
 19. Move to previous state: `git checkout commit-id`
 20. Verify current files in working directory: `ls`
 21. View history log: `git log --oneline --all`
-22. Back to the future: `git checkout more-recent-commit-id`
+22. Back to the 'future': `git checkout branch-name (master or main)`
 
 ## Git branches and merge
 
