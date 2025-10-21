@@ -53,8 +53,8 @@ pip is the package installer for Python. It allows you to install, update, and m
 
 ### New Project sample
 Imagine that you start a new project with the following requirements:
-- python interpreter 3.8
-- pyjokes library
+* python interpreter 3.8
+* pyjokes library
 
 You can create a new environment, activate it, install pip, install the required libraries with pip and then execute the script.
 
