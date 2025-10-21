@@ -27,8 +27,8 @@ Configuration
 ## Git first steps tutorial
 
 1. Create a new directory to host a repository: `mkdir new-repo`
-2. Initialize new repo: `git init`
-3. Update configuration (if needed): `git config user.name=myname` + `git confit user.email=my-email@domain.com`
+2. Enter the directory and Initialize new repo: `cd new-repo` and  `git init`
+3. Update configuration (if needed): `git config user.name myname` + `git confit user.email my-email@domain.com`
 4. Verify my current configuration: `git config --list`
 5. View repo status: `git status`
 6. Create a new file: `echo Hi > greetings.txt`
