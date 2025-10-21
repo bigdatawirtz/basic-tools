@@ -47,12 +47,14 @@ Conda is the main Anaconda package manager.
 
 ### PIP
 pip is the package installer for Python. It allows you to install, update, and manage Python packages and libraries from the Python Package Index (PyPI).
+
 * `conda install pip`: install pip if you are in a fresh conda environment
 * `pip install package-name`: install the selected package in the current environment
 * `pip uninstall package-name`: uninstall the selected package from the current environment
 
 ### New Project sample
 Imagine that you start a new project with the following requirements:
+
 * python interpreter 3.8
 * pyjokes library
 
